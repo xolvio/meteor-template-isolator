@@ -8,20 +8,18 @@
 </body>
 
 <template name="hello">
-  <button id="counter">Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+
+  <button id="buttonCounter">Click Me</button>
+  <p>You've pressed the button {{buttonCounter}} times.</p>
   <div class="space"></div>
 
-  <input id="myText"/>
+  <input id="enterCounter" placeholder="Press enter in here"/>
   <p>You've pressed enter {{enterCounter}} times.</p>
   <div class="space"></div>
 
-  {{#with en}} {{> sayHello }} {{/with}}
-  {{#with fr}} {{> sayHello }} {{/with}}
+  <p>Speak in</p>
+  {{#with anEnglishContext}} <button class="say-hello">{{language}}</button> {{/with}}
+  {{#with aFrenchContext}} <button class="say-hello">{{language}}</button> {{/with}}
   <p id="message"></p>
 
-</template>
-
-<template name="sayHello">
-  <button class="say-hello">Say Hello in {{language}}</button>
 </template>

@@ -1,27 +1,27 @@
 describe('Hello events', function () {
 
 
-  it('increments the session when button is clicked', function () {
+  it('counts the number of button presses', function () {
 
     // SETUP
-    Session.set('counter', 0);
+    Session.set('buttonCounter', 0);
 
     // EXECUTE
-    Template.hello.fireEvent('click button#counter');
+    Template.hello.fireEvent('click button#buttonCounter');
 
     // VERIFY
-    expect(Session.get('counter')).toBe(1);
+    expect(Session.get('buttonCounter')).toBe(1);
 
   });
 
 
-  it('it counts the number of return presses', function () {
+  it('counts the number of enter presses', function () {
 
     // SETUP
     Session.set('enterCounter', 0);
 
     // EXECUTE
-    Template.hello.fireEvent('keypress input#myText', {event: {which: 13}});
+    Template.hello.fireEvent('keypress input#enterCounter', {event: {which: 13}});
 
     // VERIFY
     Session.set('enterCounter', 1);
@@ -29,7 +29,7 @@ describe('Hello events', function () {
   });
 
 
-  it('it displays the message from context', function () {
+  it('displays the message from template instance context', function () {
 
     // SETUP
     $('#message').text('');

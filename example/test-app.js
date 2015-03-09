@@ -1,22 +1,22 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+
+  Session.setDefault('buttonCounter', 0);
   Session.setDefault('enterCounter', 0);
 
   Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+    buttonCounter: function () {
+      return Session.get('buttonCounter');
     },
     enterCounter: function () {
       return Session.get('enterCounter');
     },
-    en: function() {
+    anEnglishContext: function() {
       return {
         language: "English",
         "message": "Hello World"
       };
     },
-    fr: function() {
+    aFrenchContext: function() {
       return {
         language: "French",
         "message": "Bonjour monde"
@@ -26,11 +26,11 @@ if (Meteor.isClient) {
 
   Template.hello.events({
 
-    'click button#counter': function () {
-      Session.set('counter', Session.get('counter') + 1);
+    'click button#buttonCounter': function () {
+      Session.set('buttonCounter', Session.get('buttonCounter') + 1);
     },
 
-    'keypress input#myText': function (e) {
+    'keypress input#enterCounter': function (e) {
       if (e.which === 13) {
         Session.set('enterCounter', Session.get('enterCounter') + 1);
       }
