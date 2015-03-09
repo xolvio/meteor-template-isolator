@@ -3,6 +3,15 @@ Template Isolator
 
 This is a package used for testing templates.
 
+
+Installation
+------------
+
+`meteor add xolvio:template-isolator`
+
+Usage
+-----
+
 Say you define some template events as follows in your code:
 
 ```javascript
