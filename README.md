@@ -54,8 +54,10 @@ describe('Hello events', function() {
 You can also provide the `fireEvent` method with an options object containing the data context for
 the helper invocation, an event and a templateInstance. For example:
 
+```javascript
 fireEvent('myEvent', {
   context: { some: 'values' },
   event: { { which: 13, target: {value: ''}} },
   templateInstance: new Template('myNewTemplate', function() {})
 });
+```
