@@ -9,6 +9,8 @@ Installation
 
 `meteor add xolvio:template-isolator`
 
+Note: This package is `debugOnly`, which means it will not get get deployed to production.
+
 Usage
 -----
 
@@ -49,5 +51,3 @@ describe('Hello events', function() {
 });
 
 ```
-
-This package is `debugOnly`, which means it will not get get deployed to production.
