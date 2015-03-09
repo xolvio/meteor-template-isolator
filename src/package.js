@@ -1,6 +1,6 @@
 Package.describe({
   name: 'xolvio:template-isolator',
-  version: '0.0.1',
+  version: '0.1.0',
   summary: 'Exposes code from Meteor templates for testing purposes',
   git: 'https://github.com/xolvio/meteor-template-isolator.git',
   debugOnly: true

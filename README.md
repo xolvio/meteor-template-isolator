@@ -32,7 +32,6 @@ adds an interceptor that stores the event code.
 To get the event code in your tests, you can do this:
 
 ```javascript
-
 describe('Hello events', function() {
    
   it('increments the session when button is clicked', function() {
@@ -41,7 +40,7 @@ describe('Hello events', function() {
     Session.set('counter', 0);
    
     // EXECUTE
-    Template.hello.__interceptedEvents['click button']();
+    Template.hello.fireEvent('click button');
    
     // VERIFY
     expect(Session.get('counter')).to.be(1);
@@ -49,5 +48,14 @@ describe('Hello events', function() {
   });
    
 });
-
 ```
+
+
+You can also provide the `fireEvent` method with an options object containing the data context for
+the helper invocation, an event and a templateInstance. For example:
+
+fireEvent('myEvent', {
+  context: { some: 'values' },
+  event: { { which: 13, target: {value: ''}} },
+  templateInstance: new Template('myNewTemplate', function() {})
+});
