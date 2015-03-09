@@ -61,3 +61,6 @@ fireEvent('myEvent', {
   templateInstance: new Template('myNewTemplate', function() {})
 });
 ```
+
+See the [example test](https://github.com/xolvio/meteor-template-isolator/blob/master/example/tests/jasmine/client/integration/ExampleSpec.js)
+for more details on using the options object.
