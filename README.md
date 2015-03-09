@@ -23,17 +23,20 @@ To get the event code in your tests, you can do this:
 ```javascript
 
 describe('Hello events', function() {
-
-  it('sets the session when button is clicked', function() {
-
+   
+  it('increments the session when button is clicked', function() {
+   
+    // SETUP
     Session.set('counter', 0);
-
+   
+    // EXECUTE
     Template.hello.__interceptedEvents['click button']();
-
+   
+    // VERIFY
     expect(Session.get('counter')).to.be(1);
-
+   
   });
-
+   
 });
 
 ```
