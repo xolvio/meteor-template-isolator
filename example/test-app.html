@@ -1,28 +1,27 @@
 <head>
-    <title>Xolv.io Template Isolator</title>
+  <title>Xolv.io Template Isolator</title>
 </head>
 
 <body>
-<h1>Xolv.io Template Isolator</h1>
-{{> hello}}
+  <h1>Xolv.io Template Isolator</h1>
+  {{> hello}}
 </body>
 
 <template name="hello">
+  <button id="counter">Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+  <div class="space"></div>
 
-    <button id="counter">Click Me</button>
-    <p>You've pressed the button {{counter}} times.</p>
-    <div class="space"></div>
-
-    <input id="myText"/>
-    <p>You've pressed enter {{enterCounter}} times.</p>
-    <div class="space"></div>
+  <input id="myText"/>
+  <p>You've pressed enter {{enterCounter}} times.</p>
+  <div class="space"></div>
 
   {{#with en}} {{> sayHello }} {{/with}}
   {{#with fr}} {{> sayHello }} {{/with}}
-    <p id="message"></p>
+  <p id="message"></p>
 
 </template>
 
 <template name="sayHello">
-    <button class="say-hello">Say Hello in {{language}}</button>
+  <button class="say-hello">Say Hello in {{language}}</button>
 </template>
