@@ -11,3 +11,4 @@ insecure
 xolvio:template-isolator
 sanjo:jasmine
 velocity:html-reporter
+xolvio:cucumber
