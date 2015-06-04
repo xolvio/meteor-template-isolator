@@ -3,6 +3,12 @@ Template Isolator
 
 This is a package used for testing templates.
 
+#Get the Book
+To learn more about testing with Meteor, consider purchasing our book [The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=template-isolator&utm_medium=banner&utm_campaign=template-isolator).
+
+[![](http://www.meteortesting.com/img/tmtm.gif)](http://www.meteortesting.com/?utm_source=template-isolator&utm_medium=banner&utm_campaign=template-isolator)
+
+Your support helps us continue our work on Velocity and related frameworks.
 
 Installation
 ------------
