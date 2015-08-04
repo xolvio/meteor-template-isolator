@@ -15,7 +15,7 @@ Installation
 
 `meteor add xolvio:template-isolator`
 
-This package is `debugOnly`, which means it will not get get deployed to production.
+This package is `debugOnly`, which means it will not get deployed to production.
 
 Usage
 -----
@@ -32,7 +32,7 @@ Template.hello.events({
 
 It's difficult to test the `click button` event as there is not an easy way to isolate the code.
 
-This is where this package comes in, it monkey patches the `Template.prototype.events` method and
+This is where this package comes in: it [monkey-patch](https://en.wikipedia.org/wiki/Monkey_patch)es the `Template.prototype.events` method and
 adds an interceptor that stores the event code.
 
 To get the event code in your tests, you can do this:
@@ -58,7 +58,7 @@ describe('Hello events', function() {
 
 
 You can also provide the `fireEvent` method with an options object containing the data context for
-the helper invocation, an event and a templateInstance. For example:
+the helper invocation, an event and a `templateInstance`. For example:
 
 ```javascript
 fireEvent('myEvent', {
